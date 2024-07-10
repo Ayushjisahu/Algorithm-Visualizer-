@@ -1,49 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algorithm Visualizer</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="assets/AV1.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link rel="icon" href="./AV1.png" />
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="main">
-      <div id="header">
-        <a href="/index.html"><div id="title">Algorithm Visualizer</div></a>
+    <header class="header">
+      <h1 class="h1">
+        N-Queens Visualizer <i class="fas fa-crown" style="color: #fdfffc"></i>
+      </h1>
+    </header>
+    <div class="n-queen">
+      <div class="inputbox">
+        <input type="number" class="numberbox" id="numberbox" required />
+        <label>Enter total Queens</label>
       </div>
-      <div id="container">
-        <div class="algo-container">
-          <a href="algos/sorting/index.html" class="category_link">
-            <div class="imageContainer">
-              <img src="assets/sorting.png" class="image" />
-            </div>
-            <div>Sorting Visualizer</div>
-          </a>
-        </div>
-        <div class="algo-container">
-          <a href="algos/path_finding/index.html" class="category_link">
-            <div class="imageContainer">
-              <img src="assets/path_finding.png" class="image" />
-            </div>
-            <div>Path Finding Visualizer</div>
-          </a>
-        </div>
-        <div class="algo-container">
-          <a href="algos/bst/index.html" class="category_link">
-            <div class="imageContainer">
-              <img src="assets/bst.png" class="image" />
-            </div>
-            <div>Binary Search Tree Visualizer</div>
-          </a>
-        </div>
-        <div class="algo-container">
-          <a href="algos/nQueen/index.html" class="category_link">
-            <div class="imageContainer">
-              <img src="assets/q1.jpg" class="image" />
-            </div>
-            <div>N-Queen Visualizer</div>
-          </a>
-        </div>
+
+      <div class="slider-container">
+        <input
+          class="slider"
+          id="slider"
+          type="range"
+          min="0"
+          max="100"
+          value="60"
+        />
+        <div id="progress-bar"></div>
       </div>
+      <button class="play-button" id="play-button">
+        <i class="fa fa-play" aria-hidden="true"></i> Play
+      </button>
     </div>
+    <div class="queen-arrangement" id="queen-arrangement"></div>
+    <div id="n-queen-board"></div>
+    <script src="app.js"></script>
   </body>
 </html>
